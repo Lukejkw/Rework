@@ -23,7 +23,7 @@ namespace UnitTests
         [Test]
         public void NotNullOrEmptyOrWhitespace_WithEmptyString_ShouldThrowArgumentException()
         {
-            Assert.Throws<ArgumentException>(() => Requires.NotNullOrEmptyOrWhitespace(string.Empty));
+            Assert.Throws<ArgumentNullException>(() => Requires.NotNullOrEmptyOrWhitespace(string.Empty));
         }
 
         [Test]
