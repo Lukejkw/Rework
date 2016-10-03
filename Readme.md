@@ -1,5 +1,7 @@
 # Rework
 
+[![Build status](https://ci.appveyor.com/api/projects/status/gpo5a4kjm97p7ews?svg=true)](https://ci.appveyor.com/project/Lukejkw/rework)
+
 A simple library containing all the helper methods that you have written a million times
 
 ## Requires
