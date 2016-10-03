@@ -14,4 +14,4 @@ Requires.NotNullOrEmptyOrWhitespace(someString);
 
 </pre>
 
-More comming soon!
+More coming soon!
