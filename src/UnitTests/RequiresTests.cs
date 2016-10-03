@@ -11,7 +11,7 @@ namespace UnitTests
         [Test]
         public void NotNull_WithNullObject_ShouldThrowArgumentNullException()
         {
-            Assert.Throws<ArgumentNullException>(() => Requires.NotNull(null));
+            Assert.Throws<ArgumentNullException>(() => Requires.NotNull<object>(null));
         }
 
         [Test]

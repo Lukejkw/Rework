@@ -13,9 +13,9 @@ namespace Rework
         /// Checks if the object is null. If it is, an exception is thrown
         /// </summary>
         /// <param name="obj">The object to test</param>
-        public static void NotNull(object obj)
+        public static void NotNull<T>(T obj)
         {
-            if (obj == null)
+            if (EqualityComparer<T>.Default.Equals(obj, default(T)))
                 throw new ArgumentNullException();
         }
 
@@ -23,7 +23,7 @@ namespace Rework
         /// Checks if a Collection is Null or contains no items. Throws either a ArgumentNullException or an ArgumentException
         /// </summary>
         /// <typeparam name="T"></typeparam>
-        /// <param name="items"></param>
+        /// <param name="items">Items to check for null or Count() 0</param>
         public static void NotNullOrEmpty<T>(IEnumerable<T> items)
         {
             if (items == null)
