@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>Rework</id>
-    <version>0.0.3</version>
+    <version>1.0.0</version>
     <authors>Luke Warren</authors>
     <owners>Luke Warren</owners>
     <licenseUrl>http://lukejkw@wordpress.com</licenseUrl>
@@ -10,7 +10,7 @@
     <iconUrl>http://lukewarrendev.co.za/Content/img/lwd-logo_light.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>A simple library containing all the helper methods that you have written a million times</description>
-    <releaseNotes>Initial publishing of package</releaseNotes>
+    <releaseNotes>Added string helpers. Bumped version to 1.0! Woohoo!</releaseNotes>
     <copyright>Copyright 2016</copyright>
     <tags>Utility, Helper, Parameter validation</tags>
   </metadata>
