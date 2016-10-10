@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>Rework</id>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
     <authors>Luke Warren</authors>
     <owners>Luke Warren</owners>
     <licenseUrl>https://github.com/Lukejkw/Rework/blob/master/License.md</licenseUrl>
@@ -10,7 +10,7 @@
     <iconUrl>https://raw.githubusercontent.com/Lukejkw/Rework/master/rw_logo.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>A simple library containing some handy helpers that I have rewritten a million times</description>
-    <releaseNotes>Added MIT License</releaseNotes>
+    <releaseNotes>BREAKING CHANGE - Renamed Requires to Require</releaseNotes>
     <copyright>Copyright 2016</copyright>
     <tags>Utility, Helper, Parameter validation</tags>
   </metadata>

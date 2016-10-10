@@ -7,7 +7,7 @@ namespace Rework
     /// <summary>
     /// A set of handy helper functions for checking if objects are null.
     /// </summary>
-    public class Requires
+    public class Require
     {
         /// <summary>
         /// Checks if the object is null. If it is, an exception is thrown

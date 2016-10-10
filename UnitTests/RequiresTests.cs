@@ -11,46 +11,46 @@ namespace UnitTests
         [Test]
         public void NotNull_WithNullObject_ShouldThrowArgumentNullException()
         {
-            Assert.Throws<ArgumentNullException>(() => Requires.NotNull<object>(null));
+            Assert.Throws<ArgumentNullException>(() => Require.NotNull<object>(null));
         }
 
         [Test]
         public void NotNull_WithValidObject_ShouldNotThrow()
         {
-            Assert.DoesNotThrow(() => Requires.NotNull(new object()));
+            Assert.DoesNotThrow(() => Require.NotNull(new object()));
         }
 
         [Test]
         public void NotNullOrEmptyOrWhitespace_WithEmptyString_ShouldThrowArgumentException()
         {
-            Assert.Throws<ArgumentNullException>(() => Requires.NotNullOrEmptyOrWhitespace(string.Empty));
+            Assert.Throws<ArgumentNullException>(() => Require.NotNullOrEmptyOrWhitespace(string.Empty));
         }
 
         [Test]
         public void NotNullOrEmptyOrWhitespace_WithValidString_ShouldNotThrow()
         {
-            Assert.DoesNotThrow(() => Requires.NotNullOrEmptyOrWhitespace("valid string"));
+            Assert.DoesNotThrow(() => Require.NotNullOrEmptyOrWhitespace("valid string"));
         }
 
         [Test]
         public void NotNullOrEmpty_WithNullIEnumerable_ShouldThrowNullArumentException()
         {
             List<object> list = null;
-            Assert.Throws<ArgumentNullException>(() => Requires.NotNullOrEmpty(list));
+            Assert.Throws<ArgumentNullException>(() => Require.NotNullOrEmpty(list));
         }
 
         [Test]
         public void NotNullOrEmpty_WithEmptyIEnumerable_ShouldThrowArumentException()
         {
             var list = new List<object>();
-            Assert.Throws<ArgumentException>(() => Requires.NotNullOrEmpty(list));
+            Assert.Throws<ArgumentException>(() => Require.NotNullOrEmpty(list));
         }
 
         [Test]
         public void NotNullOrEmpty_WithPopulatedIEnumerable_ShouldNotThrow()
         {
             var list = new List<object>() { new object(), new object() };
-            Assert.DoesNotThrow(() => Requires.NotNullOrEmpty(list));
+            Assert.DoesNotThrow(() => Require.NotNullOrEmpty(list));
         }
     }
 }

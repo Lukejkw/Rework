@@ -10,7 +10,7 @@ Install via NuGet: ``` Install-Package Rework ```
 
 [Or click here to go to the package landing page](https://www.nuget.org/packages/Rework)
 
-## Requires
+## Require
 
 <pre>
 
@@ -27,6 +27,21 @@ Requires.NotNullOrEmptyOrWhitespace(someString);
 <pre>
 
 "my awesome string".Slugify(); // Returns "my-awesome-string"
+
+</pre>
+
+## Check
+
+<pre>
+
+// Easily check variables for null or empty
+object thing = null;
+List<Person> peopleNull = null;
+List<Person> peopleEmpty = new List<Person>();
+
+Check.NotNull(thing); // Returns false
+Check.HasItems(peopleNull); // Returns false
+Check.HasItems(peopleEmpty); // Returns false
 
 </pre>
 
