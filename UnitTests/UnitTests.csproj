@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="CheckTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RangeTests.cs" />
     <Compile Include="RequiresTests.cs" />
     <Compile Include="StringsTests.cs" />
   </ItemGroup>
