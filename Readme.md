@@ -17,10 +17,10 @@ Install via NuGet: ``` Install-Package Rework ```
 <pre>
 
 // Make sure that object is not null
-Requires.NotNull(yourObject);
-Requires.NotNullOrEmpty(myCollection);
-Requires.NotNullOrEmpty(myCollection);
-Requires.NotNullOrEmptyOrWhitespace(someString);
+Require.NotNull(yourObject);
+Require.NotNullOrEmpty(myCollection);
+Require.NotNullOrEmpty(myCollection);
+Require.NotNullOrEmptyOrWhitespace(someString);
 
 </pre>
 
