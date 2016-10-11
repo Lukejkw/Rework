@@ -15,5 +15,10 @@ namespace Rework
         {
             return thing != null;
         }
+
+        public static bool NotNull(DateTime date)
+        {
+            return date != default(DateTime);
+        }
     }
 }

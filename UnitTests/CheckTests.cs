@@ -1,5 +1,6 @@
 ﻿using NUnit.Framework;
 using Rework;
+using System;
 using System.Collections.Generic;
 
 namespace UnitTests
@@ -40,6 +41,26 @@ namespace UnitTests
         public void NotNull_WithNotNullObj_ReturnsTrue()
         {
             var result = Check.NotNull(new object());
+
+            Assert.IsTrue(result);
+        }
+
+        [Test]
+        public void NotNull_WithNullDateTime_ReturnsFalse()
+        {
+            var defaultDate = new DateTime();
+
+            var result = Check.NotNull(default(DateTime));
+            var result2 = Check.NotNull(defaultDate);
+
+            Assert.IsFalse(result);
+            Assert.IsFalse(result2);
+        }
+
+        [Test]
+        public void NotNull_WithNotNullDateTime_ReturnsTrue()
+        {
+            var result = Check.NotNull(new DateTime(2016, 01, 01));
 
             Assert.IsTrue(result);
         }
