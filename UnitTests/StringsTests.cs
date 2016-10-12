@@ -15,6 +15,15 @@ namespace UnitTests
         }
 
         [Test]
+        public void Slugify_WithNull_ShouldReturnEmptyString()
+        {
+            string str = null;
+            var result = str.Slugify();
+
+            Assert.AreEqual(string.Empty, result);
+        }
+
+        [Test]
         public void Slugify_WithSlugifiedString_ShouldReturnSameString()
         {
             var result = "luke-is-awesome".Slugify();

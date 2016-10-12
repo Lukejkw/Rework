@@ -7,10 +7,14 @@ namespace Rework
     {
         public static string Slugify(this string phrase)
         {
+            if (!Check.NotNull(phrase))
+                return string.Empty;
+
             string str = phrase.ToLowerInvariant().RemoveAccent();
             str = Regex.Replace(str, @"[^a-z0-9\s-]", ""); // Remove all non valid chars
             str = Regex.Replace(str, @"\s+", " ").Trim(); // convert multiple spaces into one space
             str = Regex.Replace(str, @"\s", "-"); // //Replace spaces by dashes
+
             return str;
         }
 
