@@ -26,9 +26,9 @@ namespace Rework
         /// <param name="items">Items to check for null or Count() 0</param>
         public static void NotNullOrEmpty<T>(IEnumerable<T> items)
         {
-            if (items == null)
+            if (items == default(IEnumerable<T>))
                 throw new ArgumentNullException();
-            if (items.Count() <= 0)
+            if (!items.Any())
                 throw new ArgumentException();
         }
 
@@ -38,7 +38,7 @@ namespace Rework
         /// <param name="str">The string to test</param>
         public static void NotNullOrEmptyOrWhitespace(string str)
         {
-            if (String.IsNullOrEmpty(str) || String.IsNullOrWhiteSpace(str))
+            if (string.IsNullOrWhiteSpace(str))
                 throw new ArgumentNullException();
         }
     }

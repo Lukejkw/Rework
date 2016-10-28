@@ -8,7 +8,7 @@ namespace Rework
     {
         public static bool HasItems<T>(IEnumerable<T> collection)
         {
-            return NotNull(collection) && collection.Count() > 0;
+            return NotNull(collection) && collection.Any();
         }
 
         public static bool NotNull(object thing)
