@@ -6,6 +6,8 @@ namespace UnitTests
     [TestFixture]
     public class StringsTests
     {
+        #region Slugify
+
         [Test]
         public void Slugify_WithEmptyString_ShouldReturnEmptyString()
         {
@@ -54,5 +56,43 @@ namespace UnitTests
 
             Assert.AreEqual("lukeisawesome", result);
         }
+
+        #endregion
+
+        #region Truncate
+
+        [Test]
+        public void Truncate_WithEmptyString_ShouldReturnEmptyString()
+        {
+            var result = string.Empty.Truncate(10);
+
+            Assert.AreEqual(string.Empty, result);
+        }
+
+        [Test]
+        public void Truncate_WithNullString_ShouldReturnNullWithNoException()
+        {
+            var result = default(string).Truncate(10);
+
+            Assert.AreEqual(null, result);
+        }
+
+        [Test]
+        public void Truncate_WithLongString_ShouldTruncateString()
+        {
+            var result = "Some long string".Truncate(6);
+
+            Assert.AreEqual("Some l", result);
+        }
+
+        [Test]
+        public void Truncate_WithShortString_ShouldJustReturnTheString()
+        {
+            var result = "Some long string".Truncate(16);
+
+            Assert.AreEqual("Some long string", result);
+        }
+
+        #endregion
     }
 }
