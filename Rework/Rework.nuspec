@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>Rework</id>
-    <version>1.0.6</version>
+    <version>1.0.7</version>
     <authors>Luke Warren</authors>
     <owners>Luke Warren</owners>
     <licenseUrl>https://github.com/Lukejkw/Rework/blob/master/License.md</licenseUrl>
@@ -10,7 +10,7 @@
     <iconUrl>https://raw.githubusercontent.com/Lukejkw/Rework/master/rw_logo.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>A simple library containing all the handy helpers methods that you tend to rewrite.</description>
-    <releaseNotes>Fixed null string exception issue. NULL strings when Slugified() will return an empty string</releaseNotes>
+    <releaseNotes>Added truncate method</releaseNotes>
     <copyright>Copyright 2016</copyright>
     <tags>Utility,Helper,Parameter validation,string helpers,Range Helper</tags>
   </metadata>
