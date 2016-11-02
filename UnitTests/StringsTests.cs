@@ -94,5 +94,33 @@ namespace UnitTests
         }
 
         #endregion
+
+        #region TruncateAtWord
+
+        [Test]
+        public void TruncateAtWord_WithNullString_ReturnsNull()
+        {
+            Assert.AreEqual(default(string), default(string).TruncateAtWord(10));
+        }
+
+        [Test]
+        public void TruncateAtWord_WithStringWithSameLengthAsMax_ReturnsString()
+        {
+            Assert.AreEqual("some string", "some string".TruncateAtWord(11));
+        }
+
+        [Test]
+        public void TruncateAtWord_WithStringLongerThanMax_ReturnsFirstWordPlusElipsis()
+        {
+            Assert.AreEqual("some&hellip;", "some string".TruncateAtWord(9));
+        }
+
+        [Test]
+        public void TruncateAtWord_WithStringLongerThanMaxWithOneWord_ReturnsEmptyString()
+        {
+            Assert.AreEqual(string.Empty, "somestring".TruncateAtWord(9));
+        }
+
+        #endregion
     }
 }
