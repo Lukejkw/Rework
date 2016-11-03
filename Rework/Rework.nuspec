@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>Rework</id>
-    <version>1.0.7</version>
+    <version>1.0.8</version>
     <authors>Luke Warren</authors>
     <owners>Luke Warren</owners>
     <licenseUrl>https://github.com/Lukejkw/Rework/blob/master/License.md</licenseUrl>
@@ -10,7 +10,7 @@
     <iconUrl>https://raw.githubusercontent.com/Lukejkw/Rework/master/rw_logo.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>A simple library containing all the handy helpers methods that you tend to rewrite.</description>
-    <releaseNotes>Added truncate method</releaseNotes>
+    <releaseNotes>Added truncate at word method</releaseNotes>
     <copyright>Copyright 2016</copyright>
     <tags>Utility,Helper,Parameter validation,string helpers,Range Helper</tags>
   </metadata>
