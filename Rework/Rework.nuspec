@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>Rework</id>
-    <version>1.0.10</version>
+    <version>1.0.9</version>
     <authors>Luke Warren</authors>
     <owners>Luke Warren</owners>
     <licenseUrl>https://github.com/Lukejkw/Rework/blob/master/License.md</licenseUrl>
@@ -10,7 +10,7 @@
     <iconUrl>https://raw.githubusercontent.com/Lukejkw/Rework/master/rw_logo.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>A simple library containing all the handy helpers methods that you tend to rewrite.</description>
-    <releaseNotes>Made CapitalizeMethods into extension methods</releaseNotes>
+    <releaseNotes>Made Capitalize Methods into extension methods</releaseNotes>
     <copyright>Copyright 2016</copyright>
     <tags>Utility,Helper,Parameter validation,String Helpers,Range Helper</tags>
   </metadata>
