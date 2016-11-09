@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 
@@ -57,6 +58,25 @@ namespace Rework
                 return text.Substring(0, lastSpaceIndex) + trailingStringIfTextCut;
             }
             return string.Empty;
+        }
+
+        public static string CapitalizeWord(string word)
+        {
+            if (String.IsNullOrWhiteSpace(word))
+                return word;
+
+            word = word.Trim().ToLowerInvariant();
+
+            return $"{char.ToUpper(word.First())}{word.Substring(1)}";
+        }
+
+        public static string CapitalizeSentence(string sentence)
+        {
+            if (String.IsNullOrWhiteSpace(sentence))
+                return sentence;
+
+            string[] words = sentence.Trim().Split(' ');
+            return String.Join(" ", words.Select(CapitalizeWord));
         }
     }
 }

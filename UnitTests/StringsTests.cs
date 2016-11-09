@@ -122,5 +122,97 @@ namespace UnitTests
         }
 
         #endregion
+
+        #region Captitalize
+
+        [Test]
+        public void CapitalizeWord_WithLowerString_ReturnsCapitalizedWord()
+        {
+            string result = Strings.CapitalizeWord("luke");
+
+            Assert.AreEqual("Luke", result);
+        }
+
+        [Test]
+        public void CapitalizeWord_WithUpperString_ReturnsCapitalizedWord()
+        {
+            string result = Strings.CapitalizeWord("LUKE");
+
+            Assert.AreEqual("Luke", result);
+        }
+
+        [Test]
+        public void CapitalizeWord_WithStringWithWhiteSpace_ReturnsCapitalizedWord()
+        {
+            string result = Strings.CapitalizeWord("    luke    ");
+
+            Assert.AreEqual("Luke", result);
+        }
+
+        [Test]
+        public void CapitalizeWord_WithNullOrEmptyOrWhiteSpaceString_ReturnsNullStringParsed()
+        {
+            string result1 = Strings.CapitalizeWord(string.Empty);
+            string result2 = Strings.CapitalizeWord(null);
+            string result3 = Strings.CapitalizeWord("   ");// Intentional whitespace
+
+            Assert.AreEqual(string.Empty, result1);
+            Assert.AreEqual(null, result2);
+            Assert.AreEqual("   ", result3);
+        }
+
+        [Test]
+        public void CapitalizeWord_WithStringStartingWithPunctuation_ReturnsWordUnchanged()
+        {
+            string result = Strings.CapitalizeWord("-luke");
+
+            Assert.AreEqual("-luke", result);
+        }
+
+        [Test]
+        public void CapitalizeWord_WithMultipleWordPassed_ReturnsOnlyFirstWordCapatalized()
+        {
+            string result = Strings.CapitalizeWord("luke warren");
+
+            Assert.AreEqual("Luke warren", result);
+        }
+
+        [Test]
+        public void CapitalizeSentence_WithLowerSentence_ReturnsSentenceCapatalized()
+        {
+            string result = Strings.CapitalizeSentence("luke warren is cool");
+
+            Assert.AreEqual("Luke Warren Is Cool", result);
+        }
+
+        [Test]
+        public void CapitalizeSentence_WithUpperSentence_ReturnsSentenceCapatalized()
+        {
+            string result = Strings.CapitalizeSentence("LUKE WARREN IS COOL");
+
+            Assert.AreEqual("Luke Warren Is Cool", result);
+        }
+
+        [Test]
+        public void CapitalizeSentence_WithSentenceSurroundedByWhitespace_ReturnsSentenceCapatalized()
+        {
+            string result = Strings.CapitalizeSentence("   luke warren is cool   ");
+
+            Assert.AreEqual("Luke Warren Is Cool", result);
+        }
+
+        [Test]
+        public void CapitalizeSentence_WithNullEmptyOrWhitespaceSentence_ReturnsParsedSentence()
+        {
+            string result1 = Strings.CapitalizeSentence("   ");
+            string result2 = Strings.CapitalizeSentence(null);
+            string result3 = Strings.CapitalizeSentence(string.Empty);
+
+            Assert.AreEqual("   ", result1);
+            Assert.AreEqual(null, result2);
+            Assert.AreEqual(string.Empty, result3);
+        }
+
+        #endregion
     }
 }
