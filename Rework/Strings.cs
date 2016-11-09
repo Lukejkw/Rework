@@ -60,7 +60,7 @@ namespace Rework
             return string.Empty;
         }
 
-        public static string CapitalizeWord(string word)
+        public static string CapitalizeWord(this string word)
         {
             if (String.IsNullOrWhiteSpace(word))
                 return word;
@@ -70,7 +70,7 @@ namespace Rework
             return $"{char.ToUpper(word.First())}{word.Substring(1)}";
         }
 
-        public static string CapitalizeSentence(string sentence)
+        public static string CapitalizeSentence(this string sentence)
         {
             if (String.IsNullOrWhiteSpace(sentence))
                 return sentence;
