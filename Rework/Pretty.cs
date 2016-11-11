@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 namespace Rework
 {
     /// <summary>
@@ -79,7 +76,6 @@ namespace Rework
                         relativeTime = "last month";
                     }
                 }
-
             }
 
             if (string.IsNullOrEmpty(relativeTime))
