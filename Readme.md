@@ -18,7 +18,6 @@ Install via NuGet: ``` Install-Package Rework ```
 // Make sure that object is not null
 Require.NotNull(yourObject);
 Require.NotNullOrEmpty(myCollection);
-Require.NotNullOrEmpty(myCollection);
 Require.NotNullOrEmptyOrWhitespace(someString);
 ```
 
