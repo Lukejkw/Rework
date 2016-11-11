@@ -17,41 +17,42 @@ namespace Rework
         /// <returns>A string representing the relative time between the two dates</returns>
         public static string GetRelativeTimeBetweenDates(DateTime startDate, DateTime endDate, string dateFormat = "dd MMM yyyy")
         {
-            const int MAXIMUM_DAYS_IN_MONTH = 31;
-            const int ONE_MINUTE = 60;
-            const int TWO_MINUTES = 120;
-            const int ONE_HOUR = 3600;
-            const int TWO_HOURS = 7200;
-            const int ONE_DAY = 86400;
-            const int ONE_WEEK = 7;
+            const int maximumDaysInMonth = 31;
+            const int oneMinute = 60;
+            const int twoMinutes = 120;
+            const int oneHour = 3600;
+            const int twoHours = 7200;
+            const int oneDay = 86400;
+            const int oneWeek = 7;
+
             TimeSpan interval = endDate.Subtract(startDate);
             double differenceInDays = interval.TotalDays;
             int differenceInDaysRoundedUpToNearestOne = (int)Math.Round(differenceInDays);
             int differenceInSeconds = (int)interval.TotalSeconds;
             string relativeTime = "";
-            if (differenceInDays >= 0 && differenceInDaysRoundedUpToNearestOne < MAXIMUM_DAYS_IN_MONTH)
+            if (differenceInDays >= 0 && differenceInDaysRoundedUpToNearestOne < maximumDaysInMonth)
             {
                 if (differenceInDays < 1)
                 {
-                    if (differenceInSeconds < ONE_MINUTE)
+                    if (differenceInSeconds < oneMinute)
                     {
                         relativeTime = "just now";
                     }
-                    else if (differenceInSeconds < TWO_MINUTES)
+                    else if (differenceInSeconds < twoMinutes)
                     {
                         relativeTime = "1 minute ago";
                     }
-                    else if (differenceInSeconds < ONE_HOUR)
+                    else if (differenceInSeconds < oneHour)
                     {
-                        relativeTime = $"{Math.Floor((double)differenceInSeconds / ONE_MINUTE)} minutes ago";
+                        relativeTime = $"{Math.Floor((double)differenceInSeconds / oneMinute)} minutes ago";
                     }
-                    else if (differenceInSeconds < TWO_HOURS)
+                    else if (differenceInSeconds < twoHours)
                     {
                         relativeTime = "1 hour ago";
                     }
-                    else if (differenceInSeconds < ONE_DAY)
+                    else if (differenceInSeconds < oneDay)
                     {
-                        relativeTime = $"{Math.Floor((double)differenceInSeconds / ONE_HOUR)} hours ago";
+                        relativeTime = $"{Math.Floor((double)differenceInSeconds / oneHour)} hours ago";
                     }
                 }
                 else if (differenceInDays >= 1 && differenceInDays < 2)
@@ -59,13 +60,13 @@ namespace Rework
                     DateTime yesterday = endDate.AddDays(-1);
                     relativeTime = startDate.Date == yesterday.Date ? "yesterday" : "2 days ago";
                 }
-                else if (differenceInDaysRoundedUpToNearestOne < ONE_WEEK)
+                else if (differenceInDaysRoundedUpToNearestOne < oneWeek)
                 {
                     relativeTime = $"{differenceInDaysRoundedUpToNearestOne} day{(differenceInDays > 1 ? "s" : "")} ago";
                 }
-                else if (differenceInDaysRoundedUpToNearestOne < MAXIMUM_DAYS_IN_MONTH)
+                else if (differenceInDaysRoundedUpToNearestOne < maximumDaysInMonth)
                 {
-                    double numberOfWeeks = Math.Floor((double)differenceInDaysRoundedUpToNearestOne / ONE_WEEK);
+                    double numberOfWeeks = Math.Floor((double)differenceInDaysRoundedUpToNearestOne / oneWeek);
                     relativeTime = $"{numberOfWeeks} week{(numberOfWeeks > 1 ? "s" : "")} ago";
                 }
                 else
