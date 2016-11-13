@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="CheckTests.cs" />
     <Compile Include="PrettyTests.cs" />
+    <Compile Include="CryptoTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RangeTests.cs" />
     <Compile Include="RequiresTests.cs" />
