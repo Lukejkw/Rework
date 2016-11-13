@@ -57,5 +57,18 @@ Range.Between(new DateTime(2016, 01, 1), new DateTime(2016, 01, 3), new DateTime
 Range.After(new DateTime(2016, 01, 02), new DateTime(2016, 01, 01));
 ```
 
+## Crypto
+
+Helpful methods for encrypting strings
+Currently generates SHA1, SHA256, SHA512 hashed strings
+
+``` javascript
+"abc".ToSHA(Crypto.SHA_Type.SHA1); // Returns "A9993E364706816ABA3E25717850C26C9CD0D89D"
+
+"abc".ToSHA(Crypto.SHA_Type.SHA256); // Returns "BA7816BF8F01CFEA414140DE5DAE2223B00361A396177A9CB410FF61F20015AD"
+
+"abc".ToSHA(Crypto.SHA_Type.SHA512); //Returns "DDAF35A193617ABACC417349AE20413112E6FA4E89A97EA20A9EEEE64B55D39A2192992A274FC1A836BA3C23A3FEEBBD454D4423643CE80E2A9AC94FA54CA49F"
+```
+
 ### More coming soon!
 
