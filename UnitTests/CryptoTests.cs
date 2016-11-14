@@ -1,15 +1,14 @@
 ﻿using NUnit.Framework;
 using Rework;
-using System;
 
 namespace UnitTests
 {
     [TestFixture]
     public class CryptoTests
     {
-        #region GetRelativeTimeBetweenDates
+        #region ToSHA
 
-        //Verified against https://secure.ogone.com/ncol/test/testsha.asp
+        // Verified against https://secure.ogone.com/ncol/test/testsha.asp
 
         [Test]
         public void ToSHA_SHA1_ShouldMatchValue()
