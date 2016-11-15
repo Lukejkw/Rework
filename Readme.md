@@ -23,9 +23,19 @@ Require.NotNullOrEmptyOrWhitespace(someString);
 
 ## Strings
 
+Turn strings into thier URL compatable versions:
+
 ```javascript
 "my awesome string".Slugify(); // Returns "my-awesome-string"
 ```
+
+Truncate strings:
+
+```javascript
+var result = "Some long string".Truncate(4);// returns "some"
+```
+
+Truncate
 
 ## Check
 
@@ -58,14 +68,13 @@ Range.After(new DateTime(2016, 01, 02), new DateTime(2016, 01, 01));
 
 ## Pretty
 
+Methods returns readable values from .NET data types
+
+### Examples:
 ```javascript
-// Returns a readable relative time between 2 DateTime values
 
-// Usage example for time elapsed since writing this readme.
-// I can't tell you what it will return because the DateTime.Now will take the current Date and Time.
+// Get readable time elapsed based on current time
 Pretty.GetRelativeTimeBetweenDates(new DateTime(2016, 11, 11, 9, 45, 0), DateTime.Now);
-
-//Here are some examples from the test cases:
 
 // Returns "just now"
 Pretty.GetRelativeTimeBetweenDates(new DateTime(2001, 1, 1, 1, 1, 0), new DateTime(2001, 1, 1, 1, 1, 0));
@@ -109,6 +118,7 @@ string result = Pretty.GetRelativeTimeBetweenDates(new DateTime(2001, 1, 1), new
 // Returns "02 Feb 2001"
 string result = Pretty.GetRelativeTimeBetweenDates(new DateTime(2001, 2, 2), new DateTime(2001, 1, 1));
 
+```
 
 ## Crypto
 
@@ -116,12 +126,11 @@ Helpful methods for encrypting strings
 Currently generates SHA1, SHA256, SHA512 hashed strings
 
 ``` javascript
+
 "abc".ToSHA(Crypto.SHA_Type.SHA1); // Returns "A9993E364706816ABA3E25717850C26C9CD0D89D"
 
 "abc".ToSHA(Crypto.SHA_Type.SHA256); // Returns "BA7816BF8F01CFEA414140DE5DAE2223B00361A396177A9CB410FF61F20015AD"
 
 "abc".ToSHA(Crypto.SHA_Type.SHA512); //Returns "DDAF35A193617ABACC417349AE20413112E6FA4E89A97EA20A9EEEE64B55D39A2192992A274FC1A836BA3C23A3FEEBBD454D4423643CE80E2A9AC94FA54CA49F"
+
 ```
-
-### More coming soon!
-
