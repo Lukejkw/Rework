@@ -63,12 +63,9 @@ Range.After(new DateTime(2016, 01, 02), new DateTime(2016, 01, 01));
 
 // Usage example for time elapsed since writing this readme.
 // I can't tell you what it will return because the DateTime.Now will take the current Date and Time.
-Pretty.GetRelativeTimeBetweenDates(new DateTime(2016, 11, 11, 9, 45, 0), DateTime.Now);
+string result = Pretty.GetRelativeTimeBetweenDates(new DateTime(2016, 11, 11, 9, 45, 0), DateTime.Now);
 
 //Here are some examples from the test cases:
-
-// Returns "just now"
-Pretty.GetRelativeTimeBetweenDates(new DateTime(2001, 1, 1, 1, 1, 0), new DateTime(2001, 1, 1, 1, 1, 0));
 
 // Returns "just now"
 string result = Pretty.GetRelativeTimeBetweenDates(new DateTime(2001, 1, 1, 1, 1, 0), new DateTime(2001, 1, 1, 1, 1, 1));
@@ -79,17 +76,11 @@ string result = Pretty.GetRelativeTimeBetweenDates(new DateTime(2001, 1, 1, 1, 1
 // Returns "2 minutes ago"
 string result = Pretty.GetRelativeTimeBetweenDates(new DateTime(2001, 1, 1, 1, 1, 0), new DateTime(2001, 1, 1, 1, 3, 1));
 
-// Returns "59 minutes ago"
-string result = Pretty.GetRelativeTimeBetweenDates(new DateTime(2001, 1, 1, 1, 1, 0), new DateTime(2001, 1, 1, 2, 0, 0));
-
 // Returns "1 hour ago"
 string result = Pretty.GetRelativeTimeBetweenDates(new DateTime(2001, 1, 1, 1, 1, 0), new DateTime(2001, 1, 1, 2, 2, 0));
 
 // Returns "23 hours ago"
 string result = Pretty.GetRelativeTimeBetweenDates(new DateTime(2001, 1, 1, 0, 0, 1), new DateTime(2001, 1, 2, 0, 0, 0));
-
-// Returns "yesterday"
-string result = Pretty.GetRelativeTimeBetweenDates(new DateTime(2001, 1, 1), new DateTime(2001, 1, 2));
 
 // Returns "yesterday"
 string result = Pretty.GetRelativeTimeBetweenDates(new DateTime(2001, 1, 1), new DateTime(2001, 1, 2, 10, 0, 0));
@@ -105,9 +96,7 @@ string result = Pretty.GetRelativeTimeBetweenDates(new DateTime(2001, 1, 1), new
 
 // Returns "01 Jan 2001"
 string result = Pretty.GetRelativeTimeBetweenDates(new DateTime(2001, 1, 1), new DateTime(2001, 2, 2));
-
-// Returns "02 Feb 2001"
-string result = Pretty.GetRelativeTimeBetweenDates(new DateTime(2001, 2, 2), new DateTime(2001, 1, 1));
+```
 
 
 ## Crypto
@@ -121,6 +110,17 @@ Currently generates SHA1, SHA256, SHA512 hashed strings
 "abc".ToSHA(Crypto.SHA_Type.SHA256); // Returns "BA7816BF8F01CFEA414140DE5DAE2223B00361A396177A9CB410FF61F20015AD"
 
 "abc".ToSHA(Crypto.SHA_Type.SHA512); //Returns "DDAF35A193617ABACC417349AE20413112E6FA4E89A97EA20A9EEEE64B55D39A2192992A274FC1A836BA3C23A3FEEBBD454D4423643CE80E2A9AC94FA54CA49F"
+```
+
+
+## Collections
+
+Helpful methods for working with collections
+
+``` javascript
+// Shuffle a collection of items into a different order
+List<int> numbers = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+var shuffled = numbers.Shuffle();
 ```
 
 ### More coming soon!
