@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Rework
 {
@@ -19,7 +17,9 @@ namespace Rework
         /// <returns>The collection in a different order</returns>
         public static IEnumerable<T> Shuffle<T>(this IEnumerable<T> items)
         {
-            return from item in items orderby Guid.NewGuid() ascending select item;
+            return from item in items
+                   orderby Guid.NewGuid() ascending
+                   select item;
         }
     }
 }
