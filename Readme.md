@@ -1,6 +1,10 @@
 ![Rework Logo](https://raw.githubusercontent.com/Lukejkw/Rework/master/rw_logo.png "Rework Logo")
 
-# Rework  [![Build status](https://ci.appveyor.com/api/projects/status/gpo5a4kjm97p7ews?svg=true)](https://ci.appveyor.com/project/Lukejkw/rework)
+# Rework
+
+[![Build status](https://ci.appveyor.com/api/projects/status/gpo5a4kjm97p7ews?svg=true)](https://ci.appveyor.com/project/Lukejkw/rework)
+
+[![Nuget](https://img.shields.io/nuget/dt/rework.svg)](https://ci.appveyor.com/project/Lukejkw/rework) 
 
 A simple library containing all the helper methods that you have probably written a million times.
 
