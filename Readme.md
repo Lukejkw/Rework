@@ -65,10 +65,6 @@ Range.After(new DateTime(2016, 01, 02), new DateTime(2016, 01, 01));
 ```javascript
 // Returns a readable relative time between 2 DateTime values
 
-// Usage example for time elapsed since writing this readme.
-// I can't tell you what it will return because the DateTime.Now will take the current Date and Time.
-string result = Pretty.GetRelativeTimeBetweenDates(new DateTime(2016, 11, 11, 9, 45, 0), DateTime.Now);
-
 //Here are some examples from the test cases:
 
 // Returns "just now"
